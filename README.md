@@ -4,6 +4,8 @@ YourLesson是针对深圳大学的选课系统进行抢课的，这里只需要�
 
 ## 下载
 
+`git clone https://github.com/Lewin671/YourLesson.git`
+
 ## 设置帐号和密码等参数
 在YourLesson包里面有一个`setting.py`文件，里面设置好你的参数。参数的含义如下：
 * USER_ID: 用户帐号
