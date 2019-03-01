@@ -2,6 +2,7 @@ from . import session, vode_item, login_item, batch_item
 from . import setting
 from . import item
 import json
+import os
 
 
 def get_vode():
@@ -11,10 +12,15 @@ def get_vode():
 
     data = json_data['data']
 
-    vode_item.setVode(data['vode'])
     vode_item.setTimestamp(json_data['timestamp'])
     vode_item.setToken(data['token'])
 
+    response = session.get("http://210.39.12.30/xsxkapp/sys/xsxkapp/student/vcode/image.do?vtoken=%s"%vode_item.token)
+    path = os.path.abspath('pic/img.png')
+    with open(path,mode="wb+") as f:
+        f.write(response.content)
+    vode = input("请输入验证码： ")
+    vode_item.setVode(vode)
     vode_item.showInfo()
 
 
@@ -35,6 +41,7 @@ def login():
         headers=headers,
         data=data)
 
+    print(response.text)
     json_data = json.loads(response.text)
     print(json_data['msg'])
     login_item.setToken(json_data['data']['token'])
