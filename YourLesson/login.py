@@ -82,12 +82,13 @@ def choose_lesson(class_id, teaching_class_type):
         'Referer': 'http://210.39.12.30/xsxkapp/sys/xsxkapp/*default/grablessons.do?token={}'.format(login_item.token),
         'token': login_item.token
     }
-    print(form_data)
+
     response = session.post(
         url="http://210.39.12.30/xsxkapp/sys/xsxkapp/elective/volunteer.do",
         data=form_data,
         headers=headers)
-    print(response.text)
+
+    return response.text
 
 
 def bash_open():
