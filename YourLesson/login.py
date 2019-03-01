@@ -19,7 +19,7 @@ def get_vode():
     path = os.path.abspath('pic/img.png')
     with open(path,mode="wb+") as f:
         f.write(response.content)
-    vode = input("请输入验证码： ")
+    vode = input("请输入验证码（在pic文件夹下的img.png)： ")
     vode_item.setVode(vode)
     vode_item.showInfo()
 
