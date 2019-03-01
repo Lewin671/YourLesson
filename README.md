@@ -34,6 +34,7 @@ wheel      0.33.1
 
 ## 运行抢课程序
 先下载不冲突、不满的课程到data文件夹，以便后面的操作。
+`python download_data.py`
 
 在终端中使用`python main.py`可运行单门抢课程序。运行程序的时候要用到课程编号，请用户到时候自行在data文件夹用excel等用具查找。
 
