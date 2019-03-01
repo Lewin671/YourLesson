@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
     class_id = input("请输入课程id (在data文件夹下找): ")
 
-    print("开始强课中...")
+    print("开始抢课中...")
 
 
 

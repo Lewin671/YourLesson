@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e93ed25-ea75-4b98-842e-d5d951456c9e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/YourLesson/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/YourLesson/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YourLesson/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/YourLesson/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/方案内课程.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/方案内课程.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/方案外课程.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/方案外课程.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/本班课程.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/本班课程.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/校公选课.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/校公选课.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="7e93ed25-ea75-4b98-842e-d5d951456c9e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/YourLesson/login.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="338">
-              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -35,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/方案外课程.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            <state relative-caret-position="304">
+              <caret line="16" column="30" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -48,21 +40,26 @@
         <entry file="file://$PROJECT_DIR$/YourLesson/setting.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+            <state relative-caret-position="167">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/本班课程.csv">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -247,16 +244,15 @@
       <option name="presentableId" value="Default" />
       <updated>1551404661943</updated>
       <workItem from="1551404665422" duration="1893000" />
-      <workItem from="1551407071552" duration="9744000" />
+      <workItem from="1551407071552" duration="10378000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11637000" />
+    <option name="totallyTimeSpent" value="12271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.1826923" />
       <window_info id="Structure" order="1" sideWeight="0.50080514" side_tool="true" weight="0.1826923" />
@@ -369,9 +365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/本班课程.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/方案内课程.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -399,34 +392,37 @@
     <entry file="file://$PROJECT_DIR$/YourLesson/setting.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/YourLesson/login.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/方案外课程.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state relative-caret-position="167">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/本班课程.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/方案外课程.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="30" />
         </state>
       </provider>
     </entry>

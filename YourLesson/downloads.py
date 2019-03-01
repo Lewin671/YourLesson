@@ -85,10 +85,12 @@ def save_to_file(type,methods):
                     break
                 teacher = "\""+str(course['tcList'][j]['teacherName'])+"\""
                 item = [course['courseName'],course['tcList'][j]['teachingClassID']]
-                if course['tcList'][j]['conflictDesc'] == None:
+                if course['tcList'][j]['conflictDesc'] == None and (course['tcList'][j]['numberOfSelected'] < course['tcList'][j]['classCapacity']) and (course['selected'] == False):
                     file.write(",".join(item)+","+str(teacher)+"\n")
                 else:
                     pass
+
+                    #print(course['tcList'][j]['numberOfSelected'],course['tcList'][j]['classCapacity'])
                     #print(course['tcList'][j]['conflictDesc'])
 
                 #print(teacher)
