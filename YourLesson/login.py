@@ -19,31 +19,36 @@ def get_vode():
     path = os.path.abspath('pic/img.png')
     with open(path,mode="wb+") as f:
         f.write(response.content)
-    vode = input("请输入验证码（在pic文件夹下的img.png)： ")
-    vode_item.setVode(vode)
-    vode_item.showInfo()
+
 
 
 def login():
     get_vode()
     headers = setting.HEADERS
     headers['Referer'] = "http://210.39.12.30/xsxkapp/sys/xsxkapp/*default/index.do"
-    data = {
-        "loginName": setting.USER_ID,
-        "loginPwd": setting.PASSWORD,
-        "verifyCode": vode_item.vode,
-        "vtoken": vode_item.token
-    }
 
-    response = session.post(
-        url="http://210.39.12.30/xsxkapp/sys/xsxkapp/student/check/login.do?timestrap={}".format(
-            vode_item.timestamp),
-        headers=headers,
-        data=data)
+    while(True):
+        vode = input("请输入验证码（在pic文件夹下的img.png)： ")
+        vode_item.setVode(vode)
+        data = {
+            "loginName": setting.USER_ID,
+            "loginPwd": setting.PASSWORD,
+            "verifyCode": vode_item.vode,
+            "vtoken": vode_item.token
+        }
 
-    print(response.text)
+        response = session.post(
+            url="http://210.39.12.30/xsxkapp/sys/xsxkapp/student/check/login.do?timestrap={}".format(
+                vode_item.timestamp),
+            headers=headers,
+            data=data)
+        if "登录成功" in response.text:
+            print("登录成功")
+            break
+        else:
+            print("验证码不正确，请重新输入")
+
     json_data = json.loads(response.text)
-    print(json_data['msg'])
     login_item.setToken(json_data['data']['token'])
 
 
@@ -103,4 +108,4 @@ def bash_open():
         "http://210.39.12.30/xsxkapp/sys/xsxkapp/elective/batch.do?timestamp=1551403192473")
     json_data = json.loads(response.text)
     batch_item.setBatch(json_data['dataList'][0]['code'])
-    print("bashcode is ", json_data['dataList'][0]['code'])
+    #print("bashcode is ", json_data['dataList'][0]['code'])
