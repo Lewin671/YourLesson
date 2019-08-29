@@ -1,22 +1,12 @@
-from . import session
-from . import login_item
-from . import batch_item
-from . import setting
+from . import *
 import json
 import os
 
+headers = setting.HEADERS
 
 def in_course(page):
     form_data = {
         "querySetting": r'''{"data": {"studentCode": "%s", "campus": "01","electiveBatchCode": "%s", "isMajor": "1","teachingClassType": "FANKC", "checkConflict": "2", "checkCapacity": "2","queryContent": "MOOC:2,"}, "pageSize": "10", "pageNumber": %s, "order": "","orderBy": "courseNumber"}'''%(setting.USER_ID,batch_item.batch,str(page))
-    }
-
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
-        'Referer': 'http://210.39.12.30/xsxkapp/sys/xsxkapp/*default/grablessons.do?token={}'.format(login_item.token),
-        'token': login_item.token,
-        'X-Requested-With': 'XMLHttpRequest',
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
     }
     response = session.post("http://210.39.12.30/xsxkapp/sys/xsxkapp/elective/programCourse.do",headers=headers,data=form_data)
     return response.text
@@ -28,13 +18,7 @@ def recommended_course(page):
         "querySetting": r'''{"data": {"studentCode": "%s", "campus": "01","electiveBatchCode": "%s", "isMajor": "1","teachingClassType": "TJKC", "checkConflict": "2", "checkCapacity": "2","queryContent": "MOOC:2,"}, "pageSize": "10", "pageNumber": %s, "order": "","orderBy": "courseNumber"}'''%(setting.USER_ID,batch_item.batch,str(page))
     }
 
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
-        'Referer': 'http://210.39.12.30/xsxkapp/sys/xsxkapp/*default/grablessons.do?token={}'.format(login_item.token),
-        'token': login_item.token,
-        'X-Requested-With': 'XMLHttpRequest',
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-    }
+
     response = session.post(url=url,headers=headers,data=form_data)
     return response.text
 
@@ -43,13 +27,6 @@ def out_course(page):
         "querySetting": r'''{"data": {"studentCode": "%s", "campus": "01","electiveBatchCode": "%s", "isMajor": "1","teachingClassType": "FAWKC", "checkConflict": "2", "checkCapacity": "2","queryContent": "MOOC:2,"}, "pageSize": "10", "pageNumber": %s, "order": "","orderBy": "courseNumber"}'''%(setting.USER_ID,batch_item.batch,str(page))
     }
 
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
-        'Referer': 'http://210.39.12.30/xsxkapp/sys/xsxkapp/*default/grablessons.do?token={}'.format(login_item.token),
-        'token': login_item.token,
-        'X-Requested-With': 'XMLHttpRequest',
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-    }
     response = session.post("http://210.39.12.30/xsxkapp/sys/xsxkapp/elective/programCourse.do",headers=headers,data=form_data)
     return response.text
 
@@ -58,13 +35,30 @@ def public_course(page):
         "querySetting": r'''{"data": {"studentCode": "%s", "campus": "01","electiveBatchCode": "%s", "isMajor": "1","teachingClassType": "XGXK", "checkConflict": "2", "checkCapacity": "2","queryContent": "MOOC:2,"}, "pageSize": "10", "pageNumber": %s, "order": "","orderBy": "courseNumber"}'''%(setting.USER_ID,batch_item.batch,str(page))
     }
 
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36',
-        'Referer': 'http://210.39.12.30/xsxkapp/sys/xsxkapp/*default/grablessons.do?token={}'.format(login_item.token),
-        'token': login_item.token,
-        'X-Requested-With': 'XMLHttpRequest',
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+    response = session.post("http://210.39.12.30/xsxkapp/sys/xsxkapp/elective/programCourse.do",headers=headers,data=form_data)
+    return response.text
+
+def sport_course(page):
+    form_data = {
+        "querySetting": r'''{"data": {"studentCode": "%s", "campus": "01","electiveBatchCode": "%s", "isMajor": "1","teachingClassType": "TYKC", "checkConflict": "2", "checkCapacity": "2","queryContent": "MOOC:2,"}, "pageSize": "10", "pageNumber": %s, "order": "","orderBy": "courseNumber"}'''%(setting.USER_ID,batch_item.batch,str(page))
     }
+
+    response = session.post("http://210.39.12.30/xsxkapp/sys/xsxkapp/elective/programCourse.do",headers=headers,data=form_data)
+    return response.text
+
+def fuxiu_course(page):
+    form_data = {
+        "querySetting": r'''{"data": {"studentCode": "%s", "campus": "01","electiveBatchCode": "%s", "isMajor": "1","teachingClassType": "FXKC", "checkConflict": "2", "checkCapacity": "2","queryContent": "MOOC:2,"}, "pageSize": "10", "pageNumber": %s, "order": "","orderBy": "courseNumber"}'''%(setting.USER_ID,batch_item.batch,str(page))
+    }
+
+    response = session.post("http://210.39.12.30/xsxkapp/sys/xsxkapp/elective/programCourse.do",headers=headers,data=form_data)
+    return response.text
+
+def mooc(page):
+    form_data = {
+        "querySetting": r'''{"data": {"studentCode": "%s", "campus": "01","electiveBatchCode": "%s", "isMajor": "1","teachingClassType": "MOOC", "checkConflict": "2", "checkCapacity": "2","queryContent": "MOOC:2,"}, "pageSize": "10", "pageNumber": %s, "order": "","orderBy": "courseNumber"}'''%(setting.USER_ID,batch_item.batch,str(page))
+    }
+
     response = session.post("http://210.39.12.30/xsxkapp/sys/xsxkapp/elective/programCourse.do",headers=headers,data=form_data)
     return response.text
 
@@ -84,17 +78,15 @@ def save_to_file(type,methods):
                 if len(course['tcList']) <= j:
                     break
                 teacher = "\""+str(course['tcList'][j]['teacherName'])+"\""
-                item = [course['courseName'],course['tcList'][j]['teachingClassID']]
+                item = [course['courseName'],course['tcList'][j]['teachingClassID'],str(course['tcList'][j]['teachingPlace'])]
+                #print(item)
+                file.write(",".join(item)+","+str(teacher)+"\n")
+                """
                 if course['tcList'][j]['conflictDesc'] == None and (course['tcList'][j]['numberOfSelected'] < course['tcList'][j]['classCapacity']) and (course['selected'] == False):
                     file.write(",".join(item)+","+str(teacher)+"\n")
                 else:
                     pass
-
-                    #print(course['tcList'][j]['numberOfSelected'],course['tcList'][j]['classCapacity'])
-                    #print(course['tcList'][j]['conflictDesc'])
-
-                #print(teacher)
-
+                """
 
 def clear_data():
     path = os.path.abspath("data")

@@ -3,7 +3,9 @@
 # 方案内课程: 'FANKC'
 # 方案外课程： 'FAWKC'
 # 校公选课： 'XGXK'
-
+# 慕课: "ＭOOC"，
+# 辅修课程: "FXKC"，
+# 体育课程:"TYKC"
 # example
 # course =[
 #    {'type':'TJKC','id':'201820192150286000103'},
@@ -16,23 +18,30 @@ from YourLesson import login, downloads
 from YourLesson import setting
 import time
 
-courses =[{'type':'FANKC','id':'201820192150286000103'},{'id':'201820192150274000103','type':'FANKC'}]
+courses =[
+    {'id':'201920201190114000103','type':'FXKC','name':"解析几何(徐希)"},
+    {'id':'201920201990008000101','type':'MOOC','name':"拓展英语词汇"},
+    {'id':'201920201990039000101','type':'MOOC','name':"走进性科学"},
+]
 
 if __name__ == "__main__":
 
-    for course in courses:
-        for i in range(setting.COUNT):
-            response = login.choose_lesson(course['id'],course['type'])
+    for i in range(setting.COUNT):
+        for course in courses:
+            try:
+                response = login.choose_lesson(course['id'],course['type'])
 
-            if "该课程超过课容量" in response:
-                print("该课程超过课容量")
-                break
-            elif "添加选课志愿成功" in response:
-                print("抢课成功")
-                break
-            else:
-                print(response)
-            time.sleep(setting.DELAY/1000.0)
+                if "该课程超过课容量" in response:
+                    print("该课程超过课容量")
+                    break
+                elif "添加选课志愿成功" in response:
+                    print("抢课成功")
+                    break
+                else:
+                    print(course['name']+": "+response)
+                time.sleep(setting.DELAY/1000.0)
+            except:
+                print("something wrong")
 
     print("抢课结束")
 

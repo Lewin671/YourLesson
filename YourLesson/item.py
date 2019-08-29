@@ -1,31 +1,5 @@
-class VodeItem(object):
-    """verify code item"""
-    def __init__(self):
-        self.vode = ""
-        self.token = ""
-        self.timestamp = ""
+from YourLesson.setting import BATCH
 
-    def setVode(self,vode):
-        self.vode = vode
-
-    def setToken(self,token):
-        self.token = token
-
-    def setTimestamp(self,timestamp):
-        self.timestamp = timestamp
-
-    def showInfo(self):
-        print("vode is {}, token is {}, timestamp is {}".format(self.vode,self.token,self.timestamp))
-
-
-class LoginItem(object):
-    """ login item """
-
-    def __init__(self):
-        self.token = ""
-
-    def setToken(self,token):
-        self.token = token
 
 class CourseItem(object):
     def __init__(self):
@@ -52,7 +26,7 @@ class  BatchItem(object):
     """docstring for  BatchItem"""
     def __init__(self):
         super( BatchItem, self).__init__()
-        self.batch = ""
+        self.batch = BATCH
 
     def setBatch(self,batch):
         self.batch = batch

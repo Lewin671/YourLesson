@@ -36,7 +36,6 @@ if __name__ == "__main__":
     print("开始抢课中...")
 
 
-
     for i in range(setting.COUNT):
         print("第{}次抢课中...".format(str(i)))
         response = login.choose_lesson(class_id,teaching_class_type)
