@@ -79,7 +79,7 @@ def save_to_file(type,methods):
         s = methods(page=i)
         data = json.loads(s)
 
-        if len(data['dataList'])==0:
+        if data['dataList'] is None or len(data['dataList'])==0:
             break
 
         path = os.path.abspath("data/"+type+('.csv'))
