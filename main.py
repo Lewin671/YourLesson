@@ -4,6 +4,7 @@
 import downloads
 import setting
 import time
+import sys
 import choose_course
 
 if __name__ == "__main__":
@@ -23,6 +24,9 @@ if __name__ == "__main__":
                 else:
                     print(course['name']+": "+response)
                 time.sleep(setting.delay/1000.0)
+            except KeyboardInterrupt:
+                print("通过键盘中断退出程序")
+                sys.exit()
             except:
                 print("出现错误，请检查设置setting.py部分是否填写正确")
 
