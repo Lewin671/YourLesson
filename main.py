@@ -15,6 +15,8 @@ if __name__ == "__main__":
                 response = choose_course.start_choose(
                     course['id'], course['type'])
 
+                time.sleep(setting.delay/1000.0)
+                
                 if "该课程超过课容量" in response:
                     print("该课程超过课容量")
                     break
@@ -23,7 +25,7 @@ if __name__ == "__main__":
                     break
                 else:
                     print(course['name']+": "+response)
-                time.sleep(setting.delay/1000.0)
+        
             except KeyboardInterrupt:
                 print("通过键盘中断退出程序")
                 sys.exit()
