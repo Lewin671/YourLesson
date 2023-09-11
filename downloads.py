@@ -79,6 +79,9 @@ def save_to_file(type,methods):
         s = methods(page=i)
         data = json.loads(s)
 
+        #添加0.8s的间隔避免请求频繁导致退出登录
+        time.sleep(0.8)  # 延迟
+
         if data['dataList'] is None or len(data['dataList'])==0:
             break
 
