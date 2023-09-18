@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # 下载课程信息到本地
+import time
 
 import setting
 import util
@@ -79,7 +80,10 @@ def save_to_file(type,methods):
         s = methods(page=i)
         data = json.loads(s)
 
-        if data['dataList'] is None or len(data['dataList'])==0:
+        # 添加0.8s的间隔避免请求频繁导致退出登录
+        time.sleep(0.8)  # 延迟
+
+        if data.get('dataList') is None or len(data.get('dataList', [])) == 0:
             break
 
         path = os.path.abspath("data/"+type+('.csv'))
