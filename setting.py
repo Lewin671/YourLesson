@@ -11,27 +11,34 @@
 4. 然后设置抢课延迟和选课提交次数
 '''
 
-user_id:str = "2017152021"
+user_id = "2022150091"
 
-cookie = "_WEU=0qMYZBOvtf7Ra6_CfSmbRF2aMOQneYhvisiP*xoZ3lE4usEtfqxDFCGUhdSGrQQw; zg_did=%7B%22did%22%3A%20%221753a037e6b7e6-012d7997d317e2-c781f38-144000-1753a037e6c33e%22%7D; zg_=%7B%22sid%22%3A%201602996108911%2C%22updated%22%3A%201602996161598%2C%22info%22%3A%201602996108914%2C%22superProperty%22%3A%20%22%7B%7D%22%2C%22platform%22%3A%20%22%7B%7D%22%2C%22utm%22%3A%20%22%7B%7D%22%2C%22referrerDomain%22%3A%20%22ehall.szu.edu.cn%22%2C%22cuid%22%3A%20%222017152021%22%7D; JSESSIONID=l2gQ1ltJXIp4PolCKhTANC8Nm5HH2kh9xLMRboPPVloYB93KKkTS!-278811102; insert_cookie=33374701"
+cookie = "_WEU=T705A2ZMlmBePuySlyHQQYUo7W9pvr2gmOQe48iwq4NS73qNezsNRIptWb*zwg1D; JSESSIONID=F5B6B297FCD1170DDEC9093426C33BBD; _webvpn_key=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiMjAyMjE1MDA5MSIsImdyb3VwcyI6WzE1XSwiaWF0IjoxNjk0MzU3MzQ4LCJleHAiOjE2OTQ0NDM3NDh9.H45NeDjltqHKlVBPr6uD-rpDBezfOnFVm4WrH-RynQs; webvpn_username=2022150091%7C1694357348%7Caac656bc6b5f9d1148c269a6ff81f0614b3a4619; insert_cookie=33651787; iPlanetDirectoryPro=3SVxZaH5xCG26vdXYgBMM0; nZUAHEcHJdbMO=60klwG25fxLZsoNwSJhHxXVpzGAz0Iy.1lxdkweF.hwY.aRCoCw.SctwHoNR0aIKs8RFMD18RC.J3ST2d1C9il_q"
+electiveBatchCode = "f0af76e1e27f4e9e9a7c4f495aa04655"
 
-electiveBatchCode = "b17be93d9658460e93ef557001242982"
+token = "29a26510-9fbb-4858-816b-e65771728245"
 
-token = "663cc520-b499-445a-8ba8-706aa6871d80"
-
-
+# 本班课程： 'TJKC'
+# 方案内课程: 'FANKC'
+# 方案外课程： 'FAWKC'
+# 校公选课： 'XGXK'
+# 慕课: "ＭOOC"，
+# 辅修课程: "FXKC"，
+# 体育课程:"TYKC"
 # 你要抢的课程，按照如下格式提前先填写好
-courses =[
-    {'id':'201920201190114000103','type':'FXKC','name':"解析几何(徐希)"},
-    {'id':'201920201990008000101','type':'MOOC','name':"拓展英语词汇"},
-    {'id':'201920201990039000101','type':'MOOC','name':"走进性科学"},
+courses = [
+    {'id': '202320241150291000101', 'type': 'FANKC', 'name': "计算机安全导论"},
+    {'id': '202320241150061000302', 'type': 'FANKC', 'name': "计算机图形学"},
+    {'id': '202320241510003000101', 'type': 'FANKC', 'name': "军事理论"},
 ]
 
+# 抢课的间隔，单位是毫秒
+delay:int = 350
 
-# 延迟的单位是ms
-delay:int = 1000
 # 抢课的次数
-count:int = 3
+count:int = 1000
+
+
 
 
 ########## 以上需要用户自行配置 ############
