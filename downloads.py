@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 # 下载课程信息到本地
+# 不要运行这个文件，运行download_data.py
 
 import setting
 import util
 import json
 import os
+import time
+
 
 headers = setting.headers
 session = util.get_session()
@@ -77,7 +80,9 @@ def mooc(page):
 def save_to_file(type,methods):
     for i in range(1000):
         s = methods(page=i)
+        print("s=",s)
         data = json.loads(s)
+        time.sleep(1)  # 延迟
 
         if data['dataList'] is None or len(data['dataList'])==0:
             break

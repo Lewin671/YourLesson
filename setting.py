@@ -11,27 +11,35 @@
 4. 然后设置抢课延迟和选课提交次数
 '''
 
-user_id:str = "2017152021"
+user_id:str = "2021150047"
 
-cookie = "_WEU=0qMYZBOvtf7Ra6_CfSmbRF2aMOQneYhvisiP*xoZ3lE4usEtfqxDFCGUhdSGrQQw; zg_did=%7B%22did%22%3A%20%221753a037e6b7e6-012d7997d317e2-c781f38-144000-1753a037e6c33e%22%7D; zg_=%7B%22sid%22%3A%201602996108911%2C%22updated%22%3A%201602996161598%2C%22info%22%3A%201602996108914%2C%22superProperty%22%3A%20%22%7B%7D%22%2C%22platform%22%3A%20%22%7B%7D%22%2C%22utm%22%3A%20%22%7B%7D%22%2C%22referrerDomain%22%3A%20%22ehall.szu.edu.cn%22%2C%22cuid%22%3A%20%222017152021%22%7D; JSESSIONID=l2gQ1ltJXIp4PolCKhTANC8Nm5HH2kh9xLMRboPPVloYB93KKkTS!-278811102; insert_cookie=33374701"
+cookie = "_WEU=s4IbdHDx4gkf1uFfYfBisEe00pn1rsgBkzAhrkI3aGvZQENiRxypd17y9h1Fnbse; JSESSIONID=423C027BF49FE22DFBA7525260389542; insert_cookie=21666234; b-user-id=c571adeb-8c51-f97f-3375-58c09fcab4df"
 
-electiveBatchCode = "b17be93d9658460e93ef557001242982"
+electiveBatchCode = "04a79c9569de4ac09f6826f6324a644a"
 
-token = "663cc520-b499-445a-8ba8-706aa6871d80"
+#每次重新登录后会改变
+token = "5fdafd80-a164-40de-b425-5cd4a0b64f63"
 
-
-# 你要抢的课程，按照如下格式提前先填写好
+# 本班课程： 'TJKC'
+# 方案内课程: 'FANKC'
+# 方案外课程： 'FAWKC'
+# 校公选课： 'XGXK'
+# 慕课: "ＭOOC"，
+# 辅修课程: "FXKC"，
+# 体育课程:"TYKC"
+# 你要抢的课程，按照如下格式提前先填写好   !!!!!其实不需要更新课程库.....F12看id就好......
 courses =[
-    {'id':'201920201190114000103','type':'FXKC','name':"解析几何(徐希)"},
-    {'id':'201920201990008000101','type':'MOOC','name':"拓展英语词汇"},
-    {'id':'201920201990039000101','type':'MOOC','name':"走进性科学"},
+    #id的意思是2023-2024学期+课程编号+课序号， 课程类别，       课程名字(老师名字)   【注意是英文括号】
+    {'id':'202320242150285000103','type':'FANKC','name':"互联网编程(毛斐巧)"},
+    {'id':'202320242150294000101','type':'FANKC','name':"信息检索(潘微科)"},
+    {'id':'202320242150297000101','type':'FANKC','name':"面向对象高级编程专题(徐鹏飞)"}
 ]
 
 
 # 延迟的单位是ms
-delay:int = 1000
+delay:int = 800
 # 抢课的次数
-count:int = 3
+count:int = 150000000
 
 
 ########## 以上需要用户自行配置 ############
